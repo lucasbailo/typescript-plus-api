@@ -6,13 +6,15 @@ import http from "../../../http";
 
 const FormularioRestaurante = () => {
     const parametros = useParams()
+    const [nomeRestaurante, setNomeRestaurante] = useState('')
+
     useEffect(() => {
         if (parametros.id) {
             http.get<IRestaurante>(`restaurantes/${parametros.id}/`)
                 .then(resposta => setNomeRestaurante(resposta.data.nome))
         }
     }, [parametros])
-    const [nomeRestaurante, setNomeRestaurante] = useState('')
+
     const aoSubmeterForm = (e: React.FormEvent<HTMLFormElement>) => {
         if (parametros.id) {
             e.preventDefault();

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 import http from "../../../http";
 import IPrato from "../../../interfaces/IPrato";
 
@@ -56,7 +56,7 @@ const AdministracaoPratos = () => {
                             <a href={prato.imagem} target="_blank" rel="noreferrer">Abrir Imagem</a>
                         </TableCell>
                         <TableCell>
-                            [ <Link to={`/admin/prato/${prato.id}`}>editar</Link> ]
+                            [ <RouterLink to={`/admin/pratos/${prato.id}`}>editar</RouterLink> ]
                         </TableCell>
                         <TableCell>
                             <Button variant="outlined" color="error" onClick={() => excluir(prato)}> Excluir </Button>
