@@ -32,6 +32,7 @@ const excluir = (restauranteAhSerExcluido: IPrato) => {
 - `React Hooks`
 - `TypeScript`
 - `axios`
+- `Docker`
 
 ## Author
 
